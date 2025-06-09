@@ -72,7 +72,7 @@ Total.csv
 
 
    ```r
-   Rscript pslip.r
+   Rscript emp_salary.r
    ```
 
 #### What it does:
@@ -89,6 +89,9 @@ This script:
 * The employee dictionary in Python is optimized for fast lookup.
 * The exported CSV files are automatically cleaned up after zipping.
 * R reads directly from the zip output without modifying it.
+* The R code uses tempdir() to avoid cluttering the project folder.
+* The dataset uploaded to this project folder contains fewer rows than the original due to GitHub’s file size limitations. The full dataset exceeded 25MB, which prevented it from being uploaded to the repository.
+
 
 ---
 
