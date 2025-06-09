@@ -1,8 +1,8 @@
 ## 📄 `README.md`
 
-# 🧑‍💼 San Francisco Employee Salary Data Processor
+# 🧑‍💼 Nexford Assignment - San Francisco Employee Salary Data Processor
 
-This project provides a Python and R-based workflow to process, extract, and analyze public salary data for San Francisco employees. The Python script generates employee profiles from the salary dataset, and the R script reads and displays the exported results.
+This project provides a Python and R-based workflow to process, extract, and analyze public salary data for San Francisco employees. The Python script generates employee profiles from the salary dataset,process the data into a dictionary and export an employee's data into a zipped CSV file, while  the R script reads and displays the exported zipped file.
 
 
 ## 📁 Project Structure
@@ -10,11 +10,11 @@ This project provides a Python and R-based workflow to process, extract, and ana
 ```
 
 .
-├── code1.py               # Python script to process salary data and export profiles
-├── code2.R                # R script to unzip and view exported profiles
+├── employee_salary.ipynb  # Python Jupyter notepad script to process salary data and export profiles
+├── emp_salary.R           # R script to unzip and view exported profiles
 ├── Employee Profile.zip   # Generated zip containing employee profile(s) as CSV
 ├── README.md              # Project documentation
-└── /input                 # Folder containing the original salary CSV dataset
+└── employee_salary.html   # An exported HTML file of the python script
 
 ````
 
@@ -25,14 +25,11 @@ This project provides a Python and R-based workflow to process, extract, and ana
 ### Python
 - Python 3.7+
 - pandas
-- numpy
-- seaborn
-- matplotlib
 
-Install dependencies (if needed):
+Install dependencies:
 
 ```bash
-pip install pandas numpy seaborn matplotlib
+pip install pandas
 ````
 
 ### R
@@ -44,7 +41,11 @@ pip install pandas numpy seaborn matplotlib
 
 ## 🚀 How to Run
 
-### Step 1: Run the Python Script (`code1.py`)
+### Step 1: Run the Python Script (`employee_salary.ipynb`)
+* Launch Jupyter Lab by typing 'jupyter lab' in the command prompt (Windows) or terminal (Mac/Linux).
+* Navigate to the directory where your employee_salary.ipynb file is located.
+* Click on the file to open it in Jupyter Lab.
+* Run the script inside the Jupyter lab
 
 This script:
 
@@ -53,16 +54,28 @@ This script:
 * Exports the selected employee's data to a CSV file inside a zip archive (`Employee Profile.zip`).
 
 ```bash
-python code1.py
+python employee_salary.ipynb
 ```
 
-Make sure the dataset exists at:
+Make sure the dataset exists in the same directory as the Python script:
 
 ```
-../input/20112018-salaries-for-san-francisco/Total.csv
+Total.csv
 ```
 
-### Step 2: Run the R Script (`code2.R`)
+### Step 2: Run the R Script (`emp_salary.R`)
+
+1. Open a terminal or command prompt.
+2. Navigate to the folder containing `pslip.r`.
+3. Run the entire script:
+4. Alternatively, you can run it from an R environment like RStudio:
+
+
+   ```r
+   Rscript pslip.r
+   ```
+
+#### What it does:
 
 This script:
 
@@ -70,13 +83,6 @@ This script:
 * Loads the exported CSV file.
 * Displays a preview of the employee profile data.
 
-You can run it from an R environment like RStudio:
-
-```R
-source("code2.R")
-```
-
----
 
 ## 📌 Notes
 
@@ -88,7 +94,7 @@ source("code2.R")
 
 ## 📚 Dataset Info
 
-* Source: [Kaggle – SF Salaries Dataset (2011–2018)](https://www.kaggle.com/code/itshorus/sf-salary/notebook)
+* Source: https://www.kaggle.com/datasets/mojtaba142/20112018-salaries-for-san-francisco
 * Format: CSV
 * Columns: `EmployeeName`, `JobTitle`, `BasePay`, `OvertimePay`, `OtherPay`, `Benefits`, `TotalPay`, `TotalPayBenefits`, `Year`
 
@@ -96,5 +102,5 @@ source("code2.R")
 
 ## 📬 Contact
 
-For questions or contributions, feel free to open an issue or fork the project or send me a mail at josephdokhare@gmail.com
+For questions or contributions, feel free to open an issue or fork the project or send me an email at josephdokhare@gmail.com
 
