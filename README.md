@@ -10,11 +10,11 @@ This project provides a Python and R-based workflow to process, extract, and ana
 ```
 
 .
-├── employee_salary.ipynb  # Python Jupyter notepad script to process salary data and export profiles
+├── employee_salary.ipynb  # Python Jupyter notepad script to process salary data and export employees' profiles
 ├── emp_salary.R           # R script to unzip and view exported profiles
-├── Employee Profile.zip   # Generated zip containing employee profile(s) as CSV
+├── Employee Profile.zip   # Generated zip containing an employee's profile as CSV
 ├── README.md              # Project documentation
-└── employee_salary.html   # An exported HTML file of the python script
+└── employee_salary.html   # An exported HTML file of the Jupyter notepad script
 
 ````
 
@@ -23,7 +23,7 @@ This project provides a Python and R-based workflow to process, extract, and ana
 ## 🔧 Requirements
 
 ### Python
-- Python 3.7+
+- Python 3.13+
 - pandas
 
 Install dependencies:
@@ -86,7 +86,7 @@ This script:
 
 ## 📌 Notes
 
-* The employee dictionary in Python is optimized for fast lookup.
+* The employee dictionary in Python is optimised for fast lookup.
 * The exported CSV files are automatically cleaned up after zipping.
 * R reads directly from the zip output without modifying it.
 * The R code uses tempdir() to avoid cluttering the project folder.
